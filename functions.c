@@ -15,7 +15,7 @@
 int print_char(va_list types, char buffer[],
 		int flags, int width, int precision, int size)
 {
-	char c = va_aarg(types, int);
+	char c = va_arg(types, int);
 
 	return (handle_write_char(c, buffer, flags, width, precision, size));
 }
@@ -90,7 +90,7 @@ int print_percent(va_list types, char buffer[],
 	UNUSED(flags);
 	UNUSED(width);
 	UNUSED(precision);
-	UNUZED(size);
+	UNUSED(size);
 	return (write(1, "%%", 1));
 }
 /************************ PRINT INT ***********************/
